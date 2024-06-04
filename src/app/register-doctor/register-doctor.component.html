@@ -1,81 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URO - Register as a Doctor</title>
-    <link rel="stylesheet" href="register-doctor.component.css">
-</head>
-
-<body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="illustration.jpg" alt="URO Logo" class="logo_img_header">
-                <h1>URO</h1>
-            </div>
-            <div class="nav-links flex-container">
-                <a href="#">Find Doctors</a>
-                <div class="dropdown">
-                    <a href="#" class="dropdown-toggle">Login/Signup</a>
-                    <div class="dropdown-menu">
-                        <a href="login.html">Login</a>
-                        <a href="register_doctor.html">Register as a Doctor</a>
-                        <a href="register_patient.html">Register as a Patient</a>
-                    </div>
+<main>
+    <div class="container">
+        <!-- <div class="illustration">
+            <img src="illustration.jpg" alt="Illustration" , class='logo_img'>
+        </div> -->
+        <div class="login-box">
+            <h2>Register as a Doctor</h2>
+            <form (ngSubmit)="onSubmit()" [formGroup]="signUpForm" class="form">
+                <div class="input-field">
+                    <input type="text" placeholder="First Name" formControlName="first" required>
                 </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <div class="container">
-            <!-- <div class="illustration">
-                <img src="illustration.jpg" alt="Illustration" , class='logo_img reg_doc'>
-            </div> -->
-            <div class="login-box">
-                <h2>Register as a Doctor</h2>
-                <form>
-                    <div class="input-field">
-                        <input type="text" placeholder="Full Name" required>
-                    </div>
-                    <div class="input-field">
-                        <input type="email" placeholder="Email Address" required>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" placeholder="Password" required>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" placeholder="Confirm Password" required>
-                    </div>
-                    <div class="input-field">
-                        <input type="text" placeholder="Specialization" required>
-                    </div>
-                    <div class="input-field">
-                        <input type="int" placeholder="Registration Number" required>
-                    </div>
-                    <button type="submit">Register</button>
-                </form>
-                <p>Already have an account? <a href="login.html">Login</a></p>
-            </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Last Name" formControlName="last" required>
+                </div>
+                <div class="input-field">
+                    <input type="email" placeholder="Email Address" formControlName="email" required>
+                </div>
+                <div class="input-field">
+                    <input type="text" maxlength="4" placeholder="Ex: 880" formControlName="countryCode" required>
+                    <input type="text" maxlength="14" placeholder="Phone Number" formControlName="phoneNumber" required>
+                    <span *ngIf="!validNumber" style="color: red;">INVALID PHONE NUMBER</span>
+                </div>
+                <div class="input-field">
+                    <input type="password" placeholder="Password" formControlName="password" required>
+                    <span *ngIf="!notValid" style="color: red;">PASSWORD MUST BE AT LEAST 8 CHARACTERS WITH ATLEAST ONE SPECIAL, UPPERCASE, LOWERCASE, AND NUMBER CHARACTER</span>
+                </div>
+                <div class="input-field">
+                    <input type="password" placeholder="Confirm Password" formControlName="confirmPassword" required>
+                    <span *ngIf="!noMatch" style="color: red;">PASSWORDS DO NOT MATCH</span>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+            <p>Already have an account? <a routerLink="verify">Login</a></p>
         </div>
-    </main>
-
-    <footer>
-        <div class="footer-container">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Contact Us</a>
-            <div class="social-media">
-                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-            </div>
-        </div>
-    </footer>
+    </div>
+</main>
 
     <script src="script.js"></script>
-</body>
 
-</html>

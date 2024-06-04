@@ -1,10 +1,38 @@
-<h1>TEST</h1>
-
+<header>
+  <nav>
+      <div class="logo">
+          <img src="illustration.jpg" alt="URO Logo" class="logo_img_header">
+          <h1>URO</h1>
+      </div>
+      <div class="nav-links flex-container">
+          <a href="#">Find Doctors</a>
+          <div class="dropdown">
+              <a href="#" class="dropdown-toggle">Login/Signup</a>
+              <div class="dropdown-menu">
+                  <a routerLink="/login">Login</a>
+                  <a routerLink="/registerDoctor">Register as a Doctor</a>
+                  <a routerLink="/register">Register as a Patient</a>
+                  <!-- <a href="login.html">Login</a>
+                  <a href="register_doctor.html">Register as a Doctor</a>
+                  <a href="register_patient.html">Register as a Patient</a> -->
+              </div>
+          </div>
+      </div>
+  </nav>
+</header>
 <router-outlet>
-  <a routerLink="/login">TEST</a>
+
 </router-outlet>
 
-
-
-
-<h2>TEST</h2>
+<footer>
+  <div class="footer-container">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Contact Us</a>
+      <div class="social-media">
+          <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+          <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+          <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+      </div>
+  </div>
+</footer>

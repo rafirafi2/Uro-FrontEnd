@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+.verification-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #f9f9f9;
+  }
+  
+  .verification-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .resend-link {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .resend-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .resend-link a:hover {
+    color: #0056b3;
+  }
+  
+  .resend-link a.disabled {
+    color: gray;
+    cursor: not-allowed;
+  }
+  
+  .resend-link a .countdown {
+    font-weight: normal;
+    color: red;
+  }
+  
+  .resend-message {
+    text-align: center;
+    margin-top: 10px;
+    color: green;
+  }
+
+
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+      background-color: #f2f2f2;
+  }
+  
+  header {
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+  
+  .logo_img_header {
+      width: 50px;
+      height: auto;
+      margin-right: 10px;
+  }
+  
+  .logo {
+      display: flex;
+      align-items: center;
+  }
+  
+  .logo_img {
+      height: 250px;
+      width: 250px;
+  }
+  
+  .logo h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #333;
+  }
+  
+  .flex-container {
+      display: flex;
+      align-items: center;
+  }
+  
+  .nav-links a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+      color: #0077b6;
+  }
+  
+  .dropdown {
+      position: relative;
+  }
+  
+  .dropdown-toggle {
+      cursor: pointer;
+  }
+  
+  .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+      min-width: 160px;
+      padding: 10px 0;
+  }
+  
+  .dropdown-menu a {
+      display: block;
+      padding: 8px 16px;
+      text-decoration: none;
+      color: #333;
+      transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-menu a:hover {
+      background-color: #f2f2f2;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+      display: block;
+  }
+  
+  .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 80px);
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+  
+  .login-box {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+      margin-top: 40px;
+  }
+  
+  .register-box {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+      margin-top: 20px;
+  }
+  
+  .login-box h2 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+  }
+  
+  .register-box h2 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+  }
+  
+  .input-field {
+      margin-bottom: 20px;
+  }
+  
+  .input-field input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+  }
+  
+  .input-field input:focus {
+      outline: none;
+      border-color: #0077b6;
+  }
+  
+  button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #0077b6;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+      background-color: #005a8c;
+  }
+  
+  .forgot-password {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      color: #333;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s ease;
+  }
+  
+  .forgot-password:hover {
+      color: #0077b6;
+  }
+  
+  .login-box p {
+      text-align: center;
+      margin-top: 20px;
+  }
+  
+  .login-box p a {
+      color: #0077b6;
+      text-decoration: none;
+  }
+  
+  .login-box p a:hover {
+      text-decoration: underline;
+  }
+  
+  .illustration {
+      text-align: center;
+      margin-bottom: 40px;
+  }
+  
+  .illustration img {
+      max-width: 100%;
+      height: auto;
+  }
+  
+  footer {
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+  }
+  
+  .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+  }
+  
+  .footer-container a {
+      text-decoration: none;
+      color: #333;
+      margin: 5px 10px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+  }
+  
+  .footer-container a:hover {
+      color: #0077b6;
+  }
+  
+  .social-media a {
+      margin: 0 10px;
+  }
+  
+  @media (max-width: 768px) {
+      .container {
+          padding: 20px;
+      }
+  
+      .footer-container {
+          flex-direction: column;
+      }
+  
+      .footer-container a {
+          margin: 10px 0;
+      }
+  }
